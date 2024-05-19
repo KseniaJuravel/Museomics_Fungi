@@ -1,7 +1,7 @@
 # Ancient_Fungi
 Work performed for ancient Botrytis fungi analysis of two strains
 
-Production of whole-genome sequencing data
+## Production of whole-genome sequencing data
 
 Genomic DNA was extracted from the colonies using the ????? protocol previously described in ref. ???? or the ???? Kit . The genomes were sequenced either at the ????? Platform of Institut ????, the Department ???? using the Illumina sequencing technology. Paired-end reads of ???? bp were obtained. Reads have been deposited at the NCBI Sequence Read Archive under BioProject ID PRJN######.
 
