@@ -68,6 +68,40 @@ done
 
 
 <details>
+<summary>VCF Correction</summary>
+
+```
+gatk --java-options "-Xmx4g" VariantFiltration --reference T4_REF.fa --variant 054_T4.g.vcf.gz --filter-expression "QD < 2.0" --filter-name "SNP_QD" --filter-expression "FS > 60.0" --filter-name "SNP_FS" --filter-expression "SOR > 4.0" --filter-name "SNP_SOR" --filter-expression "MQ < 40.0" --filter-name "SNP_MQ" --filter-expression "MQRankSum < -12.5" --filter-name "SNP_MQRankSum" --filter-expression "ReadPosRankSum < -8.0" --filter-name "SNP_ReadPosRankSum" --output 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz
+
+gatk --java-options "-Xmx4g" SelectVariants --reference T4_REF.fa --variant 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz -exclude-filtered --exclude-non-variants --output 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+Using GATK jar /usr/local/hurcs/gatk4/4.2.5.0/share/gatk4-4.2.5.0-0/gatk-package-4.2.5.0-local.jar
+
+
+
+
+
+```
+ </details>
+
+
+
+
+<details>
+<summary>Results location of VCF identified on chromosomes </summary>
+
+
+
+
+```
+Using Rplot https://www.bioinformatics.com.cn/plot_basic_SNP_density_by_CMplot_107_en
+
+```
+ </details>
+
+
+
+
+<details>
 <summary>Results T4 (ALOC0100000) vs. strains 903053 and 903054 </summary>
 
 
@@ -82,7 +116,7 @@ plot-vcfstats                      joined_T4_2.3_vs_7B.stats.txt -p outdir_T4
 Figure Total counts for indels and SNPs:
 
 
-More comparisons can be found in folder 
+More comparisons can be found in the folder 
 
 
 
