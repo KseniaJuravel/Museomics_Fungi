@@ -5,9 +5,9 @@ Work performed for ancient Botrytis fungi analysis of two strains
 
 Genomic DNA was extracted from the colonies using the ????? protocol previously described in ref. ???? or the ???? Kit . The genomes were sequenced either at the ????? Platform of Institut ????, the Department ???? using the Illumina sequencing technology. Paired-end reads of ???? bp were obtained. Reads have been deposited at the NCBI Sequence Read Archive under BioProject ID PRJN######.
 
-Each set of paired-end reads was mapped against the ??? reference genome ??? haplotype A or haplotype B53 downloaded from the ???? database (version ?? ??Date) using the Bowtie2 Alignment tool, version ???. SAMtools version ?? and Picard tools version ??? (http://broadinstitute.github.io/picard) were then used to filter, sort and convert SAM files. 
+Each set of paired-end reads was mapped against the ??? reference genome ??? haplotype ???  downloaded from the ???? database (version ?? ??Date) using the Bowtie2 Alignment tool, version 2.4.1 (Built on Fri Feb 28 17:23:43 UTC 2020). SAMtools samtools 1.9, Using htslib 1.9 and Picard tools version 1.70 (http://broadinstitute.github.io/picard) were then used to filter, sort and convert SAM files. 
 
-SNPs were called using Genome Analysis Toolkit version 3.1–157,58,59, according to the GATK Best Practices. SNPs and indels were filtered using these following parameters: VariantFiltration, QD < 2.0, LowQD, ReadPosRankSum < −8.0, LowRankSum, FS > 60.0, HightFS, MQRankSum < −12.5, MQRankSum, MQ < 40.0, LowMQ, HaplotypeScore > 13.0, HaploScore. Coverages were also calculated using the Genome Analysis Toolkit.
+SNPs were called using Genome Analysis Toolkit version 4.2.0.0 and  according to the GATK Best Practices. SNPs and indels were filtered using the following parameters: VariantFiltration, QD < 2.0, LowQD, ReadPosRankSum < −8.0, LowRankSum, FS > 60.0, HightFS, MQRankSum < −12.5, MQRankSum, MQ < 40.0, LowMQ, HaplotypeScore > 13.0, HaploScore. Coverages were also calculated using the Genome Analysis Toolkit.
 
 
 <details>
@@ -122,3 +122,75 @@ More comparisons can be found in the folder
 
  </details>
 
+
+```
+vt/vt peek 053_T4.g.vcf.gz.RGsorteer.all.snp.filtered.vcf.gz.pass.vcf.gz
+peek v0.5
+
+options:     input VCF file            053_T4.g.vcf.gz.RGsorteer.all.snp.filtered.vcf.gz.pass.vcf.gz
+
+
+stats: no. of samples                     :          1
+       no. of chromosomes                 :        118
+
+       ========== Micro variants ==========
+
+       no. of SNP                         :      67489
+           2 alleles                      :           67484 (2.97) [50470/17014]
+           3 alleles                      :               5 (0.67) [4/6]
+
+       no. of INDEL                       :       3328
+           2 alleles                      :            3312 (0.90) [1568/1744]
+           3 alleles                      :              16 (0.23) [6/26]
+
+       no. of SNP/INDEL                   :          5
+           3 alleles                      :               5 (1.50) [3/2] (inf) [5/0]
+
+       no. of micro variants              :      70822
+
+       ++++++ Other useful categories +++++
+
+        no. of complex substitutions      :          5
+           3 alleles                      :               5 (1.50) [3/2] (inf) [5/0]
+
+
+       ========= General summary ==========
+
+       no. of VCF records                        :      70822
+```
+
+```
+vt/vt peek 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+peek v0.5
+
+options:     input VCF file            054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+
+
+stats: no. of samples                     :          1
+       no. of chromosomes                 :        118
+
+       ========== Micro variants ==========
+
+       no. of SNP                         :      89430
+           2 alleles                      :           89424 (2.92) [66608/22816]
+           3 alleles                      :               6 (0.33) [3/9]
+
+       no. of INDEL                       :       4749
+           2 alleles                      :            4724 (0.86) [2190/2534]
+           3 alleles                      :              25 (0.79) [22/28]
+
+       no. of SNP/INDEL                   :          1
+           3 alleles                      :               1 (0.00) [0/1] (inf) [1/0]
+
+       no. of micro variants              :      94180
+
+       ++++++ Other useful categories +++++
+
+        no. of complex substitutions      :          1
+           3 alleles                      :               1 (0.00) [0/1] (inf) [1/0]
+
+
+       ========= General summary ==========
+
+       no. of VCF records                        :      94180
+```
