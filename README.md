@@ -223,7 +223,46 @@ stats: no. of samples                     :          1
 
 ```
  </details>
+
+
+ The results shown by the tools indicate
+
  </details>
+
+<details>
+<summary>Results B05.10 genome (AAID02000000) vs. strains 903053 and 903054 </summary>
+
+<details>
+<summary>Tool #1 for VCF analysis - bcftools</summary>
+
+
+Command:
+
+```
+
+
+```
+ </details>
+
+
+<details>
+<summary>Tool #2 for VCF analysis - vt peek</summary>
+
+
+Command:
+
+```
+
+
+```
+ </details>
+
+The results showed by the tools indicate
+
+ 
+ </details>
+
+
 
  ## Phylogenetic analyses
 
