@@ -359,6 +359,9 @@ Command line:
 
 The resulting cladogram:
 
+
+![Tree](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/Phylogenetic_analyses/Phylogenetic_analyses_cladogram.png)
+
 The results shown by the cladogram indicate
 
 ## Selected genes analysis
