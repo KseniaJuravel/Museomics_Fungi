@@ -109,6 +109,8 @@ Plot of locations with correction:
 T4_vs_903054
 ![T4_vs_903054](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/VCF_output/T4_vs_903054/13f5f469b08a2ec5.png)
 
+T4_vs_903053
+![T4_vs_903053](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/VCF_output/T4_vs_903053/0b452b346e3a3e9c.png)
 
  </details>
 
