@@ -308,6 +308,10 @@ stats: no. of samples                     :          1
 <details>
 <summary>Results B05.10 genome (AAID02000000) vs. strains 903053 and 903054 </summary>
 
+chromosomes
+
+![](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/VCF_output/B05NCBI_vs_B05Local/8293d5a8309d2e5b.png)
+
 <details>
 <summary>Tool #1 for VCF analysis - bcftools</summary>
 
