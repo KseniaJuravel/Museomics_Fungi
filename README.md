@@ -5,10 +5,7 @@ Work performed for ancient Botrytis fungi analysis of two strains
 
 Genomic DNA was extracted from the colonies using the ????? protocol previously described in ref. ???? or the ???? Kit . The genomes were sequenced either at the ????? Platform of Institut ????, the Department ???? using the Illumina sequencing technology. Paired-end reads of ???? bp were obtained. Reads have been deposited at the NCBI Sequence Read Archive under BioProject ID PRJN######.
 
-Each set of paired-end reads was mapped against the ??? reference genome ??? haplotype ???  downloaded from the ???? database (version ?? ??Date) using the Bowtie2 Alignment tool, version 2.4.1 (Built on Fri Feb 28 17:23:43 UTC 2020). SAMtools samtools 1.9, Using htslib 1.9 and Picard tools version 1.70 (http://broadinstitute.github.io/picard) were then used to filter, sort and convert SAM files. 
-
-SNPs were called using Genome Analysis Toolkit version 4.2.0.0 and  according to the GATK Best Practices. SNPs and indels were filtered using the following parameters: VariantFiltration, QD < 2.0, LowQD, ReadPosRankSum < −8.0, LowRankSum, FS > 60.0, HightFS, MQRankSum < −12.5, MQRankSum, MQ < 40.0, LowMQ, HaplotypeScore > 13.0, HaploScore. Coverages were also calculated using the Genome Analysis Toolkit.
-
+Each set of paired-end reads was mapped against the ??? reference genome ??? haplotype ???  downloaded from the ???? database (version ?? ??Date) using the Bowtie2 Alignment tool, version 2.4.1 (Built on Fri Feb 28 17:23:43 UTC 2020). SAMtools samtools 1.9, Using htslib 1.9 and Picard tools version 1.70 (http://broadinstitute.github.io/picard) to filter, sort and convert SAM files. 
 
 <details>
 <summary>Raw data</summary>
@@ -66,9 +63,11 @@ done
 ```
  </details>
 
+SNPs were called using Genome Analysis Toolkit version 4.2.0.0 and 4.2.5.0 according to the GATK Best Practices. SNPs and indels were filtered using the following parameters: VariantFiltration, QD < 2.0, LowQD, ReadPosRankSum < −8.0, LowRankSum, FS > 60.0, HightFS, MQRankSum < −12.5, MQRankSum, MQ < 40.0, LowMQ, HaplotypeScore > 13.0, HaploScore. Coverages were also calculated using the Genome Analysis Toolkit.
+
 
 <details>
-<summary>VCF Correction</summary>
+<summary>VCF Correction command:</summary>
 
 ```
 gatk --java-options "-Xmx4g" VariantFiltration --reference T4_REF.fa --variant 054_T4.g.vcf.gz --filter-expression "QD < 2.0" --filter-name "SNP_QD" --filter-expression "FS > 60.0" --filter-name "SNP_FS" --filter-expression "SOR > 4.0" --filter-name "SNP_SOR" --filter-expression "MQ < 40.0" --filter-name "SNP_MQ" --filter-expression "MQRankSum < -12.5" --filter-name "SNP_MQRankSum" --filter-expression "ReadPosRankSum < -8.0" --filter-name "SNP_ReadPosRankSum" --output 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz
@@ -76,26 +75,28 @@ gatk --java-options "-Xmx4g" VariantFiltration --reference T4_REF.fa --variant 0
 gatk --java-options "-Xmx4g" SelectVariants --reference T4_REF.fa --variant 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz -exclude-filtered --exclude-non-variants --output 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
 Using GATK jar /usr/local/hurcs/gatk4/4.2.5.0/share/gatk4-4.2.5.0-0/gatk-package-4.2.5.0-local.jar
 
-
-
-
-
 ```
  </details>
 
 
-
+To ensure that the correction impacts the results significantly, the location of the variants was plotted to their location and manually inspected for variant T4 (ALOC0100000) vs. strains 903053. 
 
 <details>
-<summary>Results location of VCF identified on chromosomes </summary>
-
-
+<summary>Results location of VCF identified on chromosomes comparison for correction</summary>
 
 
 ```
 Using Rplot https://www.bioinformatics.com.cn/plot_basic_SNP_density_by_CMplot_107_en
 
 ```
+
+Plot of locations without correction:
+
+
+
+Plot of locations with correction:
+
+
  </details>
 
 
