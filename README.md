@@ -105,6 +105,9 @@ Plot of locations with correction:
 <details>
 <summary>Results T4 (ALOC0100000) vs. strains 903053 and 903054 </summary>
 
+<details>
+<summary>Tool #1 for VCF analysis - bcftools</summary>
+
 
 Command:
 
@@ -117,8 +120,7 @@ plot-vcfstats                      joined_T4_2.3_vs_7B.stats.txt -p outdir_T4
 Figure Total counts for indels and SNPs:
 
 
-More comparisons can be found in the folder 
-
+More comparisons can be found in the folder. 
 
 
  </details>
@@ -200,4 +202,15 @@ stats: no. of samples                     :          1
        no. of VCF records                        :      94180
 ```
 
+ </details>
+
+
+<details>
+<summary>Results</summary>
+
+```
+
+
+```
+ </details>
  </details>
