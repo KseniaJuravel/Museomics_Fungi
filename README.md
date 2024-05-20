@@ -134,6 +134,7 @@ plot-vcfstats                      joined_T4_2.3_vs_7B.stats.txt -p outdir_T4
 
 Figure Total counts for indels and SNPs:
 
+![](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/Figures%26Data/corrected_outdir_T4/venn_bars.snps.png)
 
 More comparisons can be found in the folder. 
 
