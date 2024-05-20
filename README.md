@@ -122,6 +122,10 @@ More comparisons can be found in the folder
 
  </details>
 
+ 
+<details>
+<summary>Tool #2 for VCF analysis - vt peek</summary>
+
 
 ```
 vt/vt peek 053_T4.g.vcf.gz.RGsorteer.all.snp.filtered.vcf.gz.pass.vcf.gz
@@ -194,3 +198,5 @@ stats: no. of samples                     :          1
 
        no. of VCF records                        :      94180
 ```
+
+ </details>
