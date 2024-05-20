@@ -212,7 +212,7 @@ stats: no. of samples                     :          1
        no. of VCF records                        :      94180
 ```
 
-
+The following results represent the T4 (ALOC0100000) genome vs. the local B05 sequenced (1. no correction of parameters for the VCF output, 2. with correction):
 
 
 ```
