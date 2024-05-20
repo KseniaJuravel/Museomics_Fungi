@@ -65,6 +65,16 @@ done
 
 SNPs were called using Genome Analysis Toolkit version 4.2.0.0 and 4.2.5.0 according to the GATK Best Practices. SNPs and indels were filtered using the following parameters: VariantFiltration, QD < 2.0, LowQD, ReadPosRankSum < −8.0, LowRankSum, FS > 60.0, HightFS, MQRankSum < −12.5, MQRankSum, MQ < 40.0, LowMQ, HaplotypeScore > 13.0, HaploScore. Coverages were also calculated using the Genome Analysis Toolkit.
 
+The parameters are shown in other fungi recent research:
+
+https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000979#cited
+
+Li X, Muñoz JF, Gade L, Argimon S, Bougnoux M-E, Bowers JR, Chow NA, Cuesta I, Farrer RA, Maufrais C, et al. 2023. Comparing genomic variant identification protocols for Candida auris. Microbial Genomics 9:1–19.
+
+https://www.nature.com/articles/s41467-018-04787-4#citeas
+
+Ropars, J., Maufrais, C., Diogo, D. et al. Gene flow contributes to diversification of the major fungal pathogen Candida albicans. Nat Commun 9, 2253 (2018). https://doi.org/10.1038/s41467-018-04787-4
+
 
 <details>
 <summary>VCF Correction command:</summary>
@@ -214,3 +224,10 @@ stats: no. of samples                     :          1
 ```
  </details>
  </details>
+
+ ## Phylogenetic analyses
+
+
+
+ 
+## Selected genes analysis
