@@ -212,6 +212,77 @@ stats: no. of samples                     :          1
        no. of VCF records                        :      94180
 ```
 
+
+
+
+```
+(Not corrected HapplotypeCaller)
+vt/vt peek B05_T4.g.vcf.gz
+peek v0.5
+
+options:     input VCF file            B05_T4.g.vcf.gz
+
+
+stats: no. of samples                     :          1
+       no. of chromosomes                 :        118
+
+       ========== Micro variants ==========
+
+       no. of SNP                         :     147695
+           2 alleles                      :          147647 (2.66) [107267/40380]
+           3 alleles                      :              48 (0.48) [31/65]
+
+       no. of INDEL                       :      15900
+           2 alleles                      :           15766 (0.90) [7475/8291]
+           3 alleles                      :             134 (1.76) [171/97]
+
+       no. of SNP/INDEL                   :         25
+           3 alleles                      :              25 (0.92) [12/13] (1.00) [16/16]
+
+       no. of micro variants              :     163620
+
+       ++++++ Other useful categories +++++
+
+        no. of complex substitutions      :         25
+           3 alleles                      :              25 (0.92) [12/13] (1.00) [16/16]
+
+
+       ========= General summary ==========
+
+       no. of VCF records                        :     163620
+```
+
+
+```
+(Corrected HapplotypeCaller)
+vt/vt peek B05_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+peek v0.5
+
+options:     input VCF file            B05_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+
+
+stats: no. of samples                     :          1
+       no. of chromosomes                 :        117
+
+       ========== Micro variants ==========
+
+       no. of SNP                         :      83016
+           2 alleles                      :           83010 (2.92) [61844/21166]
+           3 alleles                      :               6 (0.50) [4/8]
+
+       no. of INDEL                       :       4046
+           2 alleles                      :            4027 (0.88) [1886/2141]
+           3 alleles                      :              19 (0.90) [18/20]
+
+       no. of micro variants              :      87062
+
+       ++++++ Other useful categories +++++
+
+
+       ========= General summary ==========
+
+       no. of VCF records                        :      87062
+```
  </details>
 
 
@@ -223,11 +294,10 @@ stats: no. of samples                     :          1
 
 ```
  </details>
-
+ </details>
 
  The results shown by the tools indicate
 
- </details>
 
 <details>
 <summary>Results B05.10 genome (AAID02000000) vs. strains 903053 and 903054 </summary>
@@ -257,7 +327,7 @@ Command:
 ```
  </details>
 
-The results showed by the tools indicate
+The results shown by the tools indicate
 
  
  </details>
@@ -284,6 +354,7 @@ Command line:
 
 The resulting cladogram:
 
- 
+The results shown by the cladogram indicate
+
 ## Selected genes analysis
 
