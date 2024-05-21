@@ -1,4 +1,4 @@
-# Ancient_Fungi
+# Museomics_Fungi
 Work performed for ancient Botrytis fungi analysis of two strains
 
 ## Production of whole-genome sequencing data
