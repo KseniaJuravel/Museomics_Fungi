@@ -76,6 +76,30 @@ https://www.nature.com/articles/s41467-018-04787-4#citeas
 Ropars, J., Maufrais, C., Diogo, D. et al. Gene flow contributes to diversification of the major fungal pathogen Candida albicans. Nat Commun 9, 2253 (2018). https://doi.org/10.1038/s41467-018-04787-4
 
 
+Alignment coverage
+
+Command:
+```
+samtools mpileup B05_bowtie_vs_2.3.sam.bam.sorted.bam | awk '{ count++ ; SUM += $4 } END { print "Total: " SUM "\t" "Nucleotides: " count "\t" "Average_coverage: " SUM/count }'
+[mpileup] 1 samples in 1 input files
+```
+
+T4 (ALOC0100000) ref with 903053 reads alignment has 
+
+Total: 3014160672       Nucleotides: 37443825   Average_coverage: 80.4982
+
+
+
+T4 (ALOC0100000) ref with 903054 reads alignment has Total:
+
+Total: 1057337721       Nucleotides: 37370932   Average_coverage: 28.2931
+
+
+T4 (ALOC0100000) ref with B05.10 local reads alignment has Total:
+
+Total: 4986300933       Nucleotides: 37481885   Average_coverage: 133.032
+
+
 <details>
 <summary>VCF Correction command:</summary>
 
