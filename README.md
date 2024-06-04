@@ -389,7 +389,8 @@ The resulting cladogram:
 
 
 ![Tree](https://github.com/KseniaJuravel/Museomics_Fungi/blob/main/Phylogeny/Phylogeny.png)
-The results shown by the cladogram indicate
+The results shown by the cladogram indicate museum strains to be closer to T4 than
+B05.10 based on the analyzed genes in this dataset. Arrows indicate the datasets used for the analysis in this study.
 
 ## Selected genes analysis
 
