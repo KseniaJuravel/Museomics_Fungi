@@ -391,6 +391,9 @@ Command line:
 
 ```
 
+The alignment:
+
+![Aln](https://github.com/KseniaJuravel/Museomics_Fungi/blob/main/Phylogeny/Screenshot%202024-06-04%20102029.png)
 
 The resulting cladogram:
 
