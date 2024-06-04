@@ -375,8 +375,9 @@ museum genomes with contemporary Botrytis genus genomes using the Multilocus seq
 typing (MLST) (Plesken et al., 2021) combined to create a phylogeny. The MLST database
 consisted of 10 gene fragments representing published _B. cinerea_ strains that were sampled
 from 14 different plants from 12 countries over 12 years.
-The obtained cladogram shows the two museum strains as sister species with very high support
-(100 bootstrap value) and both were placed as sisters cladding to Bcin sp. D12_BH20_4 from 
+The obtained cladogram for 9266 nucleotide positions in the alignment of 95 strains shows the two museum strains
+as sister species with very high support (100 bootstrap value) 
+and both were placed as sisters cladding to Bcin sp. D12_BH20_4 from 
 raspberry and C12_S_E7_4 from strawberry strains with high support (94 bootstrap value). T4 GCA
 000292645.1 reference sequence is placed in the clade, which brunches off before the museum
 strains sampled without high support (belove 85 bootstrap value), and the B05.10 NCBI
@@ -385,6 +386,11 @@ farther along the cladogram. These findings show the museum strains to be closer
 B05.10 based on the analyzed genes in this dataset.
 
 Command line:
+
+```
+
+```
+
 
 The resulting cladogram:
 
