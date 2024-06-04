@@ -385,10 +385,10 @@ reference, which cluster together with the in-house B05.10 brunches off in a mor
 farther along the cladogram. These findings show the museum strains to be closer to T4 than
 B05.10 based on the analyzed genes in this dataset.
 
-Command line:
+The command line:
 
 ```
-
+for i in T4_MLST_10_Genes_subalign_subalign.fa; do iqtree -s $i -pre $i -m MFP -bb 1000 -alrt 5000 -nt AUTO; done
 ```
 
 The alignment:
@@ -403,4 +403,18 @@ The resulting cladogram:
 The results shown by the cladogram indicate
 
 ## Selected genes analysis
+
+<br>
+
+
+
+
+</br>
+
+The command line:
+
+```
+
+
+```
 
