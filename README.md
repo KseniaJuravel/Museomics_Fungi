@@ -388,8 +388,7 @@ The alignment:
 The resulting cladogram:
 
 
-![Tree](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/Phylogenetic_analyses/Phylogenetic_analyses_cladogram.png)
-
+![Tree](https://github.com/KseniaJuravel/Museomics_Fungi/blob/main/Phylogeny/Phylogeny.png)
 The results shown by the cladogram indicate
 
 ## Selected genes analysis
