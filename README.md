@@ -94,6 +94,8 @@ Total: 4986300933       Nucleotides: 37481885   Average_coverage: 133.032
 <summary>VCF Correction command:</summary>
 
 ```
+sbatch -A gila.kahila GATK_correction.sh B05_REF_normalized.fasta B05normalized_bowtie_vs_GB05.sam.sorted.bam.out.bam.sorted2.bam.vcf.gz
+
 gatk --java-options "-Xmx4g" VariantFiltration --reference T4_REF.fa --variant 054_T4.g.vcf.gz --filter-expression "QD < 2.0" --filter-name "SNP_QD" --filter-expression "FS > 60.0" --filter-name "SNP_FS" --filter-expression "SOR > 4.0" --filter-name "SNP_SOR" --filter-expression "MQ < 40.0" --filter-name "SNP_MQ" --filter-expression "MQRankSum < -12.5" --filter-name "SNP_MQRankSum" --filter-expression "ReadPosRankSum < -8.0" --filter-name "SNP_ReadPosRankSum" --output 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz
 
 gatk --java-options "-Xmx4g" SelectVariants --reference T4_REF.fa --variant 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz -exclude-filtered --exclude-non-variants --output 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
