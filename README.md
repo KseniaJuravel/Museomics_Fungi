@@ -308,6 +308,179 @@ stats: no. of samples                     :          1
  </details>
 
 
+All vt nalysis for T4:
+
+```
+(base) ksenia.juravel@glacier-12:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/VCF_OUTPUT/PASS$ ../../VCF_OUTPUT/vt/vt multi_partition 053_T4.g.vcf.gz.RGsorteer.all.snp.filtered.vcf.gz.pass.vcf.gz 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+multi_partition v0.5
+
+Options:     input VCF file a   053_T4.g.vcf.gz.RGsorteer.all.snp.filtered.vcf.gz.pass.vcf.gz
+             input VCF file b   054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+
+    A:       70822 variants
+    B:       94180 variants
+
+               no  [ts/tv] [ins/del]
+    A-       1889  [1.98]  [1.37]
+    -B      25247  [2.72]  [0.90]
+    AB      68933  [3.00]  [0.84]
+
+    Unique variants     :      96069
+    Overall concordance :      71.75% (#intersection/#union)
+
+Time elapsed: 0.38s
+
+(base) ksenia.juravel@glacier-12:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/VCF_OUTPUT/PASS$ ../../VCF_OUTPUT/vt/vt multi_partition 053_T4.g.vcf.gz.RGsorteer.all.snp.filtered.vcf.gz.pass.vcf.gz 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz B05_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+multi_partition v0.5
+
+Options:     input VCF file a   053_T4.g.vcf.gz.RGsorteer.all.snp.filtered.vcf.gz.pass.vcf.gz
+             input VCF file b   054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+             input VCF file c   B05_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+
+    A:       70822 variants
+    B:       94180 variants
+    C:       87062 variants
+
+                no  [ts/tv] [ins/del]
+    A--       1534  [1.89]  [1.44]
+    -B-      16481  [2.64]  [0.87]
+    AB-      36874  [2.95]  [0.91]
+    --C      45882  [2.86]  [0.94]
+    A-C        355  [2.33]  [0.78]
+    -BC       8766  [2.85]  [1.01]
+    ABC      32059  [3.04]  [0.75]
+
+    Unique variants     :     141951
+    Overall concordance :      22.58% (#intersection/#union)
+
+Time elapsed: 0.58s
+
+(base) ksenia.juravel@glacier-12:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/VCF_OUTPUT/PASS$ ../../VCF_OUTPUT/vt/vt multi_partition 053_T4.g.vcf.gz.RGsorteer.all.snp.filtered.vcf.gz.pass.vcf.gz B05_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+multi_partition v0.5
+
+Options:     input VCF file a   053_T4.g.vcf.gz.RGsorteer.all.snp.filtered.vcf.gz.pass.vcf.gz
+             input VCF file b   B05_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+
+    A:       70822 variants
+    B:       87062 variants
+
+               no  [ts/tv] [ins/del]
+    A-      38408  [2.91]  [0.99]
+    -B      54648  [2.86]  [0.95]
+    AB      32414  [3.04]  [0.75]
+
+    Unique variants     :     125470
+    Overall concordance :      25.83% (#intersection/#union)
+
+Time elapsed: 0.37s
+
+(base) ksenia.juravel@glacier-12:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/VCF_OUTPUT/PASS$ ../../VCF_OUTPUT/vt/vt multi_partition 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz B05_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+multi_partition v0.5
+
+Options:     input VCF file a   054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+             input VCF file b   B05_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+
+    A:       94180 variants
+    B:       87062 variants
+
+               no  [ts/tv] [ins/del]
+    A-      53355  [2.86]  [0.90]
+    -B      46237  [2.85]  [0.94]
+    AB      40825  [3.00]  [0.81]
+
+    Unique variants     :     140417
+    Overall concordance :      29.07% (#intersection/#union)
+
+Time elapsed: 0.42s
+```
+
+
+All B05 analysis vt:
+
+```
+(base) ksenia.juravel@glacier-12:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/VCF_OUTPUT/PASS$  ../../VCF_OUTPUT/vt/vt multi_partition B05normalized_bowtie_vs_*
+multi_partition v0.5
+
+Options:     input VCF file a   B05normalized_bowtie_vs_2.3.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+             input VCF file b   B05normalized_bowtie_vs_7B.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+             input VCF file c   B05normalized_bowtie_vs_GB05.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+
+    A:       76306 variants
+    B:      101474 variants
+    C:         455 variants
+
+                no  [ts/tv] [ins/del]
+    A--       1948  [2.13]  [1.21]
+    -B-      27116  [2.74]  [0.93]
+    AB-      74288  [2.94]  [0.96]
+    --C        372  [0.76]  [0.49]
+    A-C         13  [0.00]  [0.86]
+    -BC         13  [1.00]  [0.17]
+    ABC         57  [5.67]  [0.89]
+
+    Unique variants     :     103807
+    Overall concordance :       0.05% (#intersection/#union)
+
+Time elapsed: 0.41s
+
+(base) ksenia.juravel@glacier-12:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/VCF_OUTPUT/PASS$  ../../VCF_OUTPUT/vt/vt multi_partition B05normalized_bowtie_vs_2.3.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz B05normalized_bowtie_vs_7B.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+multi_partition v0.5
+
+Options:     input VCF file a   B05normalized_bowtie_vs_2.3.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+             input VCF file b   B05normalized_bowtie_vs_7B.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+
+    A:       76306 variants
+    B:      101474 variants
+
+               no  [ts/tv] [ins/del]
+    A-       1961  [2.13]  [1.19]
+    -B      27129  [2.74]  [0.92]
+    AB      74345  [2.94]  [0.96]
+
+    Unique variants     :     103435
+    Overall concordance :      71.88% (#intersection/#union)
+
+Time elapsed: 0.41s
+
+(base) ksenia.juravel@glacier-12:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/VCF_OUTPUT/PASS$  ../../VCF_OUTPUT/vt/vt multi_partition B05normalized_bowtie_vs_2.3.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz B05normalized_bowtie_vs_GB05.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+multi_partition v0.5
+
+Options:     input VCF file a   B05normalized_bowtie_vs_2.3.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+             input VCF file b   B05normalized_bowtie_vs_GB05.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+
+    A:       76306 variants
+    B:         455 variants
+
+               no  [ts/tv] [ins/del]
+    A-      76236  [2.92]  [0.99]
+    -B        385  [0.77]  [0.48]
+    AB         70  [4.86]  [0.88]
+
+    Unique variants     :      76691
+    Overall concordance :       0.09% (#intersection/#union)
+
+Time elapsed: 0.18s
+
+(base) ksenia.juravel@glacier-12:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/VCF_OUTPUT/PASS$  ../../VCF_OUTPUT/vt/vt multi_partition B05normalized_bowtie_vs_GB05.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz B05normalized_bowtie_vs_7B.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+multi_partition v0.5
+
+Options:     input VCF file a   B05normalized_bowtie_vs_GB05.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+             input VCF file b   B05normalized_bowtie_vs_7B.sam.sorted.bam.out.bam.sorted2.bam.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
+
+    A:         455 variants
+    B:      101474 variants
+
+               no  [ts/tv] [ins/del]
+    A-        385  [0.75]  [0.50]
+    -B     101404  [2.88]  [0.95]
+    AB         70  [4.11]  [0.60]
+
+    Unique variants     :     101859
+    Overall concordance :       0.07% (#intersection/#union)
+
+Time elapsed: 0.24s
+
+```
 <details>
 <summary>Results</summary>
 
