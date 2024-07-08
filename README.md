@@ -9,6 +9,44 @@ Genomic DNA was extracted from the colonies using the ????? protocol previously 
 
 Each set of paired-end reads was mapped against the ??? reference genome ??? haplotype ???  downloaded from the ???? database (version ?? ??Date) using the Bowtie2 Alignment tool, version 2.4.1 (Built on Fri Feb 28 17:23:43 UTC 2020). SAMtools samtools 1.9, Using htslib 1.9 and Picard tools version 1.70 (http://broadinstitute.github.io/picard) to filter, sort and convert SAM files. 
 
+SNPs were called using Genome Analysis Toolkit version 4.2.0.0 and 4.2.5.0 according to the GATK Best Practices. SNPs and indels were filtered using the following parameters: VariantFiltration, QD < 2.0, LowQD, ReadPosRankSum < −8.0, LowRankSum, FS > 60.0, HightFS, MQRankSum < −12.5, MQRankSum, MQ < 40.0, LowMQ, HaplotypeScore > 13.0, HaploScore. Coverages were calculated using the Samtools mpileup toolkit. Several tools were used to ensure the accuracy of the genomic variants detected from the data.
+
+The parameters are shown in other fungi recent research:
+
+https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000979#cited
+
+Li X, Muñoz JF, Gade L, Argimon S, Bougnoux M-E, Bowers JR, Chow NA, Cuesta I, Farrer RA, Maufrais C, et al. 2023. Comparing genomic variant identification protocols for Candida auris. Microbial Genomics 9:1–19.
+
+https://www.nature.com/articles/s41467-018-04787-4#citeas
+
+Ropars, J., Maufrais, C., Diogo, D. et al. Gene flow contributes to diversification of the major fungal pathogen Candida albicans. Nat Commun 9, 2253 (2018). https://doi.org/10.1038/s41467-018-04787-4
+
+
+Alignment coverage
+
+<details>
+<summary>Command:</summary>summary>
+```
+samtools mpileup B05_bowtie_vs_2.3.sam.bam.sorted.bam | awk '{ count++ ; SUM += $4 } END { print "Total: " SUM "\t" "Nucleotides: " count "\t" "Average_coverage: " SUM/count }'
+[mpileup] 1 samples in 1 input files
+```
+ </details>
+
+```
+T4 (ALOC0100000) ref with 903053 reads alignment has 
+
+Total: 3014160672       Nucleotides: 37443825   Average_coverage: 80.4982
+```
+```
+T4 (ALOC0100000) ref with 903054 reads alignment has Total:
+
+Total: 1057337721       Nucleotides: 37370932   Average_coverage: 28.2931
+```
+```
+T4 (ALOC0100000) ref with B05.10 local reads alignment has Total:
+
+Total: 4986300933       Nucleotides: 37481885   Average_coverage: 133.032
+```
 
 <details>
 <summary>Creating the variant calling files</summary>
@@ -53,46 +91,6 @@ done
 
 ```
  </details>
-
-SNPs were called using Genome Analysis Toolkit version 4.2.0.0 and 4.2.5.0 according to the GATK Best Practices. SNPs and indels were filtered using the following parameters: VariantFiltration, QD < 2.0, LowQD, ReadPosRankSum < −8.0, LowRankSum, FS > 60.0, HightFS, MQRankSum < −12.5, MQRankSum, MQ < 40.0, LowMQ, HaplotypeScore > 13.0, HaploScore. Coverages were calculated using the Samtools mpileup toolkit. Several tools were used to ensure the accuracy of the genomic variants detected from the data.
-
-The parameters are shown in other fungi recent research:
-
-https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000979#cited
-
-Li X, Muñoz JF, Gade L, Argimon S, Bougnoux M-E, Bowers JR, Chow NA, Cuesta I, Farrer RA, Maufrais C, et al. 2023. Comparing genomic variant identification protocols for Candida auris. Microbial Genomics 9:1–19.
-
-https://www.nature.com/articles/s41467-018-04787-4#citeas
-
-Ropars, J., Maufrais, C., Diogo, D. et al. Gene flow contributes to diversification of the major fungal pathogen Candida albicans. Nat Commun 9, 2253 (2018). https://doi.org/10.1038/s41467-018-04787-4
-
-
-Alignment coverage
-
-<details>
-<summary>Command:</summary>summary>
-```
-samtools mpileup B05_bowtie_vs_2.3.sam.bam.sorted.bam | awk '{ count++ ; SUM += $4 } END { print "Total: " SUM "\t" "Nucleotides: " count "\t" "Average_coverage: " SUM/count }'
-[mpileup] 1 samples in 1 input files
-```
- </details>
-
-```
-T4 (ALOC0100000) ref with 903053 reads alignment has 
-
-Total: 3014160672       Nucleotides: 37443825   Average_coverage: 80.4982
-```
-```
-T4 (ALOC0100000) ref with 903054 reads alignment has Total:
-
-Total: 1057337721       Nucleotides: 37370932   Average_coverage: 28.2931
-```
-```
-T4 (ALOC0100000) ref with B05.10 local reads alignment has Total:
-
-Total: 4986300933       Nucleotides: 37481885   Average_coverage: 133.032
-```
-
 
 <details>
 <summary>VCF Correction command:</summary>
