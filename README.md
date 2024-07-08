@@ -68,11 +68,14 @@ Ropars, J., Maufrais, C., Diogo, D. et al. Gene flow contributes to diversificat
 
 Alignment coverage
 
-Command:
+<details>
+<summary>Command:</summary>summary>
 ```
 samtools mpileup B05_bowtie_vs_2.3.sam.bam.sorted.bam | awk '{ count++ ; SUM += $4 } END { print "Total: " SUM "\t" "Nucleotides: " count "\t" "Average_coverage: " SUM/count }'
 [mpileup] 1 samples in 1 input files
 ```
+ </details>
+
 ```
 T4 (ALOC0100000) ref with 903053 reads alignment has 
 
@@ -81,13 +84,14 @@ Total: 3014160672       Nucleotides: 37443825   Average_coverage: 80.4982
 ```
 T4 (ALOC0100000) ref with 903054 reads alignment has Total:
 
-Total: 1057337721       Nucleotides: 37370932   Average_coverage: 28.2931```
+Total: 1057337721       Nucleotides: 37370932   Average_coverage: 28.2931
 ```
 ```
 T4 (ALOC0100000) ref with B05.10 local reads alignment has Total:
 
 Total: 4986300933       Nucleotides: 37481885   Average_coverage: 133.032
 ```
+
 
 <details>
 <summary>VCF Correction command:</summary>
