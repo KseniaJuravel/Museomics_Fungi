@@ -311,7 +311,7 @@ stats: no. of samples                     :          1
 
 
 <details>
-<summary>vt multi-partition</summary>summary>
+<summary>vt multi-partition</summary>
 
 
 ```
@@ -401,22 +401,9 @@ Time elapsed: 0.42s
 
  </details>
 
-<details>
-<summary>Results</summary>
 
-```
-
-
-
-
-```
- </details>
  </details>
  
-![miltu-peek](https://github.com/KseniaJuravel/Museomics_Fungi/blob/main/Figures%26Data/Variants%20detected%20for%20the%20different%20samples%20with%20T4%20and%20B05%20reference%20files.png)
-
-
- The results shown by the tools indicate
 
 
 <details>
@@ -540,11 +527,16 @@ Time elapsed: 0.24s
 ```
 
  </details>
+ </details>
+
+
+
+
+![miltu-peek](https://github.com/KseniaJuravel/Museomics_Fungi/blob/main/Figures%26Data/Variants%20detected%20for%20the%20different%20samples%20with%20T4%20and%20B05%20reference%20files.png)
 
 The results shown by the tools indicate
 
  
- </details>
 
 
 
