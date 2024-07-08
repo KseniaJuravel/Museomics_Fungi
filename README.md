@@ -422,30 +422,116 @@ chromosomes
 <summary>Tool #1 for VCF analysis - bcftools</summary>
 
 
-Command:
-
 ```
+vt peek B05 vs 903053
 
+stats: no. of samples                     :          1
+       no. of chromosomes                 :         17
+
+       ========== Micro variants ==========
+
+       no. of SNP                         :      72862
+           2 alleles                      :           72859 (2.92) [54257/18602]
+           3 alleles                      :               3 (1.00) [3/3]
+
+       no. of INDEL                       :       3439
+           2 alleles                      :            3419 (0.99) [1698/1721]
+           3 alleles                      :              20 (0.67) [16/24]
+
+       no. of SNP/INDEL                   :          5
+           3 alleles                      :               5 (1.50) [3/2] (inf) [5/0]
+
+       no. of micro variants              :      76306
+
+       ++++++ Other useful categories +++++
+
+        no. of complex substitutions      :          5
+           3 alleles                      :               5 (1.50) [3/2] (inf) [5/0]
+
+
+       ========= General summary ==========
+
+       no. of VCF records                        :      76306
+
+
+vt peek B05 vs 903054
+
+stats: no. of samples                     :          1
+       no. of chromosomes                 :         17
+
+       ========== Micro variants ==========
+
+       no. of SNP                         :      96520
+           2 alleles                      :           96515 (2.89) [71673/24842]
+           3 alleles                      :               5 (0.11) [1/9]
+
+       no. of INDEL                       :       4948
+           2 alleles                      :            4912 (0.94) [2386/2526]
+           3 alleles                      :              36 (0.95) [35/37]
+
+       no. of SNP/INDEL                   :          6
+           3 alleles                      :               6 (0.20) [1/5] (1.00) [4/4]
+
+       no. of micro variants              :     101474
+
+       ++++++ Other useful categories +++++
+
+        no. of complex substitutions      :          6
+           3 alleles                      :               6 (0.20) [1/5] (1.00) [4/4]
+
+
+       ========= General summary ==========
+
+       no. of VCF records                        :     101474
 
 ```
  </details>
 
 
 <details>
-<summary>Tool #2 for VCF analysis - vt peek</summary>
+<summary>Tool #2 for VCF analysis - vt peek & multi-partition</summary>
+
+ ```
+
+vt peek B05 vs B05 in house
+stats: no. of samples                     :          1
+       no. of chromosomes                 :         18
+
+       ========== Micro variants ==========
+
+       no. of SNP                         :        147
+           2 alleles                      :             146 (1.28) [82/64]
+           3 alleles                      :               1 (0.00) [0/2]
+
+       no. of INDEL                       :        305
+           2 alleles                      :             290 (0.54) [102/188]
+           3 alleles                      :              15 (0.30) [7/23]
+
+       no. of SNP/INDEL                   :          3
+           3 alleles                      :               3 (0.00) [0/3] (0.25) [1/4]
+
+       no. of micro variants              :        455
+
+       ++++++ Other useful categories +++++
+
+        no. of complex substitutions      :          3
+           3 alleles                      :               3 (0.00) [0/3] (0.25) [1/4]
 
 
-Command:
+       ========= General summary ==========
+
+       no. of VCF records                        :        455
+
+
 
 ```
 
 
-```
+ </details>
 
 
-
-All B05 analysis vt:
-
+<details>
+<summary>vt multi-partition</summary>
 ```
 (base) ksenia.juravel@glacier-12:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/VCF_OUTPUT/PASS$  ../../VCF_OUTPUT/vt/vt multi_partition B05normalized_bowtie_vs_*
 multi_partition v0.5
@@ -530,6 +616,8 @@ Options:     input VCF file a   B05normalized_bowtie_vs_GB05.sam.sorted.bam.out.
 Time elapsed: 0.24s
 
 ```
+ </details>
+
 
  </details>
  </details>
