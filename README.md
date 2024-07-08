@@ -26,9 +26,11 @@ Ropars, J., Maufrais, C., Diogo, D. et al. Gene flow contributes to diversificat
 
 <details>
 <summary>Command</summary>
+ 
 ```
 samtools mpileup B05_bowtie_vs_2.3.sam.bam.sorted.bam | awk '{ count++ ; SUM += $4 } END { print "Total: " SUM "\t" "Nucleotides: " count "\t" "Average_coverage: " SUM/count }'
 [mpileup] 1 samples in 1 input files
+ 
 ```
  </details>
 
