@@ -21,9 +21,8 @@ https://www.nature.com/articles/s41467-018-04787-4#citeas
 
 Ropars, J., Maufrais, C., Diogo, D. et al. Gene flow contributes to diversification of the major fungal pathogen Candida albicans. Nat Commun 9, 2253 (2018). https://doi.org/10.1038/s41467-018-04787-4
 
-
 <details>
-<summary>Alignment coverage</summary>
+<summary>Alignments coverage</summary>
 
 <details>
 <summary>Command</summary>
@@ -108,14 +107,21 @@ Using GATK jar /usr/local/hurcs/gatk4/4.2.5.0/share/gatk4-4.2.5.0-0/gatk-package
 <details>
 <summary>Results for VCF comparisons after correction with multiple tools</summary>
 
+
+
 <details>
 <summary>Plot of locations of variants</summary>
 
+<details>
+<summary>Results T4 (ALOC0100000) vs. strains 903053 and 903054 </summary>
 
+<details>
+<summary>Tool </summary>
 ```
 Using Rplot https://www.bioinformatics.com.cn/plot_basic_SNP_density_by_CMplot_107_en
-
 ```
+ </details>
+
 
 
 <details>
@@ -129,26 +135,29 @@ Using Rplot https://www.bioinformatics.com.cn/plot_basic_SNP_density_by_CMplot_1
 
 ![T4_vs_903053](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/VCF_output/T4_vs_903053/0b452b346e3a3e9c.png)
  </details>
+<details>
+<summary>T4_vs_B05.10 genome (AAID02000000)</summary>
+
+  </details>
 
  </details>
 
 
 
-
-<details>
-<summary>Results T4 (ALOC0100000) vs. strains 903053 and 903054 </summary>
-
 <details>
 <summary>Tool #1 for VCF analysis - bcftools</summary>
 
 
-Command:
+<details>
+<summary>Command</summary>
 
 ```
 bcftools stats                      054_T4.g.vcf.gz 053_T4.g.vcf.gz > joined_T4_2.3_vs_7B.stats.txt
 
 plot-vcfstats                      joined_T4_2.3_vs_7B.stats.txt -p outdir_T4
 ```
+ </details>
+
 
 Figure Total counts for indels and SNPs:
 
