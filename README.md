@@ -47,7 +47,7 @@ cat SAD_234_S9_R1_001.fastq.gz G2307_S3_R1_001.fastq.gz.2.fq.gz > 903053.fastq.g
 
 ```
 
-The concatenated files were checked for quality using fastqc tool (FastQC v0.11.8).
+The concatenated files were checked for [quality](https://github.com/KseniaJuravel/Museomics_Fungi/tree/main/RAW_FastQC) using fastqc tool (FastQC v0.11.8).
 
 
 
@@ -85,6 +85,7 @@ samtools index -@ 70 $3.sort.bam;
 <summary>Comparison to _Botrytis cinerea T4_ GCA_000292645.1</summary>
 
 
+</details>
 
 <details>
 <summary>Comparison to _Botrytis cinerea B05.10_ GCF_000143535.2</summary>
@@ -93,7 +94,11 @@ samtools index -@ 70 $3.sort.bam;
 
 </details>
 </details>
-</details>
+
+
+
+
+<br>
 
 
 
@@ -112,12 +117,7 @@ samtools index -@ 70 $3.sort.bam;
 
 
 
-
-
-
-
-
-
+</br>
 <details>
 <summary>Alignments coverage</summary>
 
