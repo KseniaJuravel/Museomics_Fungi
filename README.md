@@ -105,9 +105,6 @@ Using GATK jar /usr/local/hurcs/gatk4/4.2.5.0/share/gatk4-4.2.5.0-0/gatk-package
 ```
  </details>
 
-
-To ensure that the correction impacts the results significantly, the location of the variants was plotted to their location and manually inspected for variant T4 (ALOC0100000) vs. strains 903053. 
-
 <details>
 <summary>Results location of VCF identified on chromosomes comparison for correction</summary>
 
@@ -117,15 +114,19 @@ Using Rplot https://www.bioinformatics.com.cn/plot_basic_SNP_density_by_CMplot_1
 
 ```
 
-Plot of locations without correction:
-T4_vs_903054
+Plot of locations of variants:
+
+<details>
+<summary>T4_vs_903054</summary>
+
 ![T4_vs_903054](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/VCF_output/T4_vs_903054/13f5f469b08a2ec5.png)
+ </details>
 
+<details>
+<summary>T4_vs_903053</summary>
 
-Plot of locations with correction:
-
-T4_vs_903053
 ![T4_vs_903053](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/VCF_output/T4_vs_903053/0b452b346e3a3e9c.png)
+ </details>
 
  </details>
 
