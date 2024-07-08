@@ -22,10 +22,11 @@ https://www.nature.com/articles/s41467-018-04787-4#citeas
 Ropars, J., Maufrais, C., Diogo, D. et al. Gene flow contributes to diversification of the major fungal pathogen Candida albicans. Nat Commun 9, 2253 (2018). https://doi.org/10.1038/s41467-018-04787-4
 
 
-Alignment coverage
+<details>
+<summary>Alignment coverage</summary>
 
 <details>
-<summary>Command:</summary>summary>
+<summary>Command</summary>
 ```
 samtools mpileup B05_bowtie_vs_2.3.sam.bam.sorted.bam | awk '{ count++ ; SUM += $4 } END { print "Total: " SUM "\t" "Nucleotides: " count "\t" "Average_coverage: " SUM/count }'
 [mpileup] 1 samples in 1 input files
@@ -47,15 +48,13 @@ T4 (ALOC0100000) ref with B05.10 local reads alignment has Total:
 
 Total: 4986300933       Nucleotides: 37481885   Average_coverage: 133.032
 ```
+ </details>
 
 <details>
 <summary>Creating the variant calling files</summary>
 
-
-
 ```
 #!/usr/bin/
-
 
 #MAPPING:
 bowtie2-build B05_REF_normalized.fasta B05_REF_normalized.fasta;
@@ -93,7 +92,7 @@ done
  </details>
 
 <details>
-<summary>VCF Correction command:</summary>
+<summary>VCF Correction command</summary>
 
 ```
 sbatch -A gila.kahila GATK_correction.sh B05_REF_normalized.fasta B05normalized_bowtie_vs_GB05.sam.sorted.bam.out.bam.sorted2.bam.vcf.gz
@@ -119,13 +118,11 @@ Using Rplot https://www.bioinformatics.com.cn/plot_basic_SNP_density_by_CMplot_1
 ```
 
 Plot of locations without correction:
-
+T4_vs_903054
+![T4_vs_903054](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/VCF_output/T4_vs_903054/13f5f469b08a2ec5.png)
 
 
 Plot of locations with correction:
-
-T4_vs_903054
-![T4_vs_903054](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/VCF_output/T4_vs_903054/13f5f469b08a2ec5.png)
 
 T4_vs_903053
 ![T4_vs_903053](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/VCF_output/T4_vs_903053/0b452b346e3a3e9c.png)
@@ -487,18 +484,17 @@ Time elapsed: 0.24s
 <details>
 <summary>Results</summary>
 
+```
+
+
+
+
+```
+ </details>
+ </details>
+ 
 ![miltu-peek](https://github.com/KseniaJuravel/Museomics_Fungi/blob/main/Figures%26Data/Variants%20detected%20for%20the%20different%20samples%20with%20T4%20and%20B05%20reference%20files.png)
 
-
-
-```
-
-
-
-
-```
- </details>
- </details>
 
  The results shown by the tools indicate
 
