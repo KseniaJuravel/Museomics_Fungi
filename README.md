@@ -49,11 +49,13 @@ cat SAD_234_S9_R1_001.fastq.gz G2307_S3_R1_001.fastq.gz.2.fq.gz > 903053.fastq.g
 
 The concatenated files were checked for [quality](https://github.com/KseniaJuravel/Museomics_Fungi/tree/main/RAW_FastQC) using fastqc tool (FastQC v0.11.8).
 
+Each file was treated with a trimmomatic tool (version o.39) to overcome the quality problems identified in the raw data to obtain good-quality reads for the next mapping step.
+
 
 
 Reference genome obtained from NCBI for [_Botrytis cinerea B05.10_ GCF_000143535.2 from Feb 5, 2015](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000143535.2/) and [_Botrytis cinerea T4_ GCA_000292645.1 from Aug 22, 2012](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_000292645.1/).
 
-Bowtie2 (bowtie2-build-s version 2.3.4.3 64-bit) was used for alignment with the following parameters:
+Bowtie2 (version 2.3.4.3 64-bit) was used for mapping the trimmed reads with the following parameters:
 
 ```
 bowtie2 -p 70 -x $1 --very-fast --preserve-tags --no-unal -q -U $2 -2 $3 -S $3.sam;
@@ -81,6 +83,7 @@ samtools index -@ 70 $3.sort.bam;
 <details>
 <summary>Variants comparison for the different strains against the reference genomes</summary>
 
+
 <details>
 <summary>Comparison to _Botrytis cinerea T4_ GCA_000292645.1</summary>
 
@@ -99,6 +102,92 @@ samtools index -@ 70 $3.sort.bam;
 
 
 <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
