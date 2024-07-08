@@ -21,6 +21,103 @@ https://www.nature.com/articles/s41467-018-04787-4#citeas
 
 Ropars, J., Maufrais, C., Diogo, D. et al. Gene flow contributes to diversification of the major fungal pathogen Candida albicans. Nat Commun 9, 2253 (2018). https://doi.org/10.1038/s41467-018-04787-4
 
+
+<details>
+<summary>Alignment of data</summary>
+
+Sequencing data obtained for each of the strains:
+
+```
+515M Feb  3  2021 GBOS_S4_R1_001.fastq.gz.2.fq.gz
+108M Feb  3  2021 G7B3_S5_R1_001.fastq.gz.2.fq.gz
+410M Feb  3  2021 G2307_S3_R1_001.fastq.gz.2.fq.gz
+3.2G Feb  1  2021 SAD_B05_S10_R1_001.fastq.gz
+663M Feb  1  2021 SAD_7B3_S11_R1_001.fastq.gz
+2.8G Feb  1  2021 SAD_234_S9_R1_001.fastq.gz
+774M Nov 23  2020 GBOS_S4_R1_001.fastq.gz
+
+```
+
+Files concatenated to represent the strains of interest as follows:
+
+```
+cat GBOS_S4_R1_001.fastq.gz GBOS_S4_R1_001.fastq.gz.2.fq.gz SAD_B05_S10_R1_001.fastq.gz > B05.fastq.gz
+cat SAD_7B3_S11_R1_001.fastq.gz G7B3_S5_R1_001.fastq.gz.2.fq.gz > 903054.fastq.gz
+cat SAD_234_S9_R1_001.fastq.gz G2307_S3_R1_001.fastq.gz.2.fq.gz > 903053.fastq.gz
+
+```
+
+The concatenated files were checked for quality using fastqc tool (FastQC v0.11.8).
+
+
+
+Reference genome obtained from NCBI for [_Botrytis cinerea B05.10_ GCF_000143535.2 from Feb 5, 2015](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000143535.2/) and [_Botrytis cinerea T4_ GCA_000292645.1 from Aug 22, 2012](https://www.ncbi.nlm.nih.gov/datasets/genome/GCA_000292645.1/).
+
+Bowtie2 (bowtie2-build-s version 2.3.4.3 64-bit) was used for alignment with the following parameters:
+
+```
+bowtie2 -p 70 -x $1 --very-fast --preserve-tags --no-unal -q -U $2 -2 $3 -S $3.sam;
+samtools view -@ 70 -h -S -b -o $3.bam $3.sam;
+samtools sort --threads 70 $3.bam -O BAM -o $3.sort.bam;
+samtools index -@ 70 $3.sort.bam;
+
+```
+
+
+</details>
+
+
+<details>
+<summary>Calling variants from alignment</summary>
+
+```
+
+
+```
+</details>
+
+
+
+<details>
+<summary>Variants comparison for the different strains against the reference genomes</summary>
+
+<details>
+<summary>Comparison to _Botrytis cinerea T4_ GCA_000292645.1</summary>
+
+
+
+<details>
+<summary>Comparison to _Botrytis cinerea B05.10_ GCF_000143535.2</summary>
+
+
+
+</details>
+</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <details>
 <summary>Alignments coverage</summary>
 
