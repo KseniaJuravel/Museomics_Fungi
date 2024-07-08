@@ -54,7 +54,7 @@ done
 ```
  </details>
 
-SNPs were called using Genome Analysis Toolkit version 4.2.0.0 and 4.2.5.0 according to the GATK Best Practices. SNPs and indels were filtered using the following parameters: VariantFiltration, QD < 2.0, LowQD, ReadPosRankSum < −8.0, LowRankSum, FS > 60.0, HightFS, MQRankSum < −12.5, MQRankSum, MQ < 40.0, LowMQ, HaplotypeScore > 13.0, HaploScore. Coverages were also calculated using the Genome Analysis Toolkit.
+SNPs were called using Genome Analysis Toolkit version 4.2.0.0 and 4.2.5.0 according to the GATK Best Practices. SNPs and indels were filtered using the following parameters: VariantFiltration, QD < 2.0, LowQD, ReadPosRankSum < −8.0, LowRankSum, FS > 60.0, HightFS, MQRankSum < −12.5, MQRankSum, MQ < 40.0, LowMQ, HaplotypeScore > 13.0, HaploScore. Coverages were calculated using the Samtools mpileup toolkit. Several tools were used to ensure the accuracy of the genomic variants detected from the data.
 
 The parameters are shown in other fungi recent research:
 
