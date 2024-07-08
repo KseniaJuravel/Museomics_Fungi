@@ -417,14 +417,17 @@ Time elapsed: 0.42s
 <details>
 <summary>Results B05.10 genome (AAID02000000) vs. strains 903053 and 903054 </summary>
 
-chromosomes
+<details>
+<summary>Plot of locations of variants</summary>
 
 ![](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/VCF_output/B05NCBI_vs_B05Local/8293d5a8309d2e5b.png)
 
 <details>
 <summary>Tool #1 for VCF analysis - bcftools</summary>
 
+```
 
+```
 
  </details>
 
@@ -529,17 +532,16 @@ stats: no. of samples                     :          1
 
        no. of VCF records                        :        455
 
-
-
 ```
-
 
  </details>
 
 
 <details>
 <summary>vt multi-partition</summary>
+ 
 ```
+
 (base) ksenia.juravel@glacier-12:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/VCF_OUTPUT/PASS$  ../../VCF_OUTPUT/vt/vt multi_partition B05normalized_bowtie_vs_*
 multi_partition v0.5
 
