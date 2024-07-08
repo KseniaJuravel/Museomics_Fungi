@@ -420,7 +420,26 @@ Time elapsed: 0.42s
 <details>
 <summary>Plot of locations of variants</summary>
 
+<details>
+<summary>B05_vs_B05.10 genome (AAID02000000)</summary>
+
 ![](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/VCF_output/B05NCBI_vs_B05Local/8293d5a8309d2e5b.png)
+
+  </details>
+
+<details>
+<summary>903053_vs_B05.10 genome (AAID02000000)</summary>
+
+  </details>
+
+
+<details>
+<summary>903054_vs_B05.10 genome (AAID02000000)</summary>
+
+  </details>
+  
+ </details>
+
 
 <details>
 <summary>Tool #1 for VCF analysis - bcftools</summary>
