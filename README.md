@@ -73,22 +73,21 @@ Command:
 samtools mpileup B05_bowtie_vs_2.3.sam.bam.sorted.bam | awk '{ count++ ; SUM += $4 } END { print "Total: " SUM "\t" "Nucleotides: " count "\t" "Average_coverage: " SUM/count }'
 [mpileup] 1 samples in 1 input files
 ```
-
+```
 T4 (ALOC0100000) ref with 903053 reads alignment has 
 
 Total: 3014160672       Nucleotides: 37443825   Average_coverage: 80.4982
-
-
-
+```
+```
 T4 (ALOC0100000) ref with 903054 reads alignment has Total:
 
-Total: 1057337721       Nucleotides: 37370932   Average_coverage: 28.2931
-
-
+Total: 1057337721       Nucleotides: 37370932   Average_coverage: 28.2931```
+```
+```
 T4 (ALOC0100000) ref with B05.10 local reads alignment has Total:
 
 Total: 4986300933       Nucleotides: 37481885   Average_coverage: 133.032
-
+```
 
 <details>
 <summary>VCF Correction command:</summary>
@@ -308,7 +307,8 @@ stats: no. of samples                     :          1
  </details>
 
 
-All vt nalysis for T4:
+vt peek multi-partition:
+
 
 ```
 (base) ksenia.juravel@glacier-12:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/VCF_OUTPUT/PASS$ ../../VCF_OUTPUT/vt/vt multi_partition 053_T4.g.vcf.gz.RGsorteer.all.snp.filtered.vcf.gz.pass.vcf.gz 054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp.filtered.vcf.gz.pass.vcf.gz
@@ -484,7 +484,13 @@ Time elapsed: 0.24s
 <details>
 <summary>Results</summary>
 
+![miltu-peek](https://github.com/KseniaJuravel/Museomics_Fungi/blob/main/Figures%26Data/Variants%20detected%20for%20the%20different%20samples%20with%20T4%20and%20B05%20reference%20files.png)
+
+
+
 ```
+
+
 
 
 ```
