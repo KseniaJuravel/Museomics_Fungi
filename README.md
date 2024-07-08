@@ -106,7 +106,10 @@ Using GATK jar /usr/local/hurcs/gatk4/4.2.5.0/share/gatk4-4.2.5.0-0/gatk-package
  </details>
 
 <details>
-<summary>Results location of VCF identified on chromosomes comparison for correction</summary>
+<summary>Results for VCF comparisons after correction with multiple tools</summary>
+
+<details>
+<summary>Plot of locations of variants</summary>
 
 
 ```
@@ -114,7 +117,6 @@ Using Rplot https://www.bioinformatics.com.cn/plot_basic_SNP_density_by_CMplot_1
 
 ```
 
-Plot of locations of variants:
 
 <details>
 <summary>T4_vs_903054</summary>
@@ -395,6 +397,58 @@ Options:     input VCF file a   054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp
 Time elapsed: 0.42s
 ```
 
+ </details>
+
+<details>
+<summary>Results</summary>
+
+```
+
+
+
+
+```
+ </details>
+ </details>
+ 
+![miltu-peek](https://github.com/KseniaJuravel/Museomics_Fungi/blob/main/Figures%26Data/Variants%20detected%20for%20the%20different%20samples%20with%20T4%20and%20B05%20reference%20files.png)
+
+
+ The results shown by the tools indicate
+
+
+<details>
+<summary>Results B05.10 genome (AAID02000000) vs. strains 903053 and 903054 </summary>
+
+chromosomes
+
+![](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/VCF_output/B05NCBI_vs_B05Local/8293d5a8309d2e5b.png)
+
+<details>
+<summary>Tool #1 for VCF analysis - bcftools</summary>
+
+
+Command:
+
+```
+
+
+```
+ </details>
+
+
+<details>
+<summary>Tool #2 for VCF analysis - vt peek</summary>
+
+
+Command:
+
+```
+
+
+```
+
+
 
 All B05 analysis vt:
 
@@ -482,54 +536,7 @@ Options:     input VCF file a   B05normalized_bowtie_vs_GB05.sam.sorted.bam.out.
 Time elapsed: 0.24s
 
 ```
-<details>
-<summary>Results</summary>
 
-```
-
-
-
-
-```
- </details>
- </details>
- 
-![miltu-peek](https://github.com/KseniaJuravel/Museomics_Fungi/blob/main/Figures%26Data/Variants%20detected%20for%20the%20different%20samples%20with%20T4%20and%20B05%20reference%20files.png)
-
-
- The results shown by the tools indicate
-
-
-<details>
-<summary>Results B05.10 genome (AAID02000000) vs. strains 903053 and 903054 </summary>
-
-chromosomes
-
-![](https://github.com/KseniaJuravel/Ancient_Fungi/blob/main/VCF_output/B05NCBI_vs_B05Local/8293d5a8309d2e5b.png)
-
-<details>
-<summary>Tool #1 for VCF analysis - bcftools</summary>
-
-
-Command:
-
-```
-
-
-```
- </details>
-
-
-<details>
-<summary>Tool #2 for VCF analysis - vt peek</summary>
-
-
-Command:
-
-```
-
-
-```
  </details>
 
 The results shown by the tools indicate
