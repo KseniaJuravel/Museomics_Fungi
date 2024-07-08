@@ -161,7 +161,7 @@ More comparisons can be found in the folder.
 
  
 <details>
-<summary>Tool #2 for VCF analysis - vt peek</summary>
+<summary>Tool #2 for VCF analysis - vt peek & multi-partition </summary>
 
 
 ```
@@ -310,7 +310,8 @@ stats: no. of samples                     :          1
  </details>
 
 
-vt peek multi-partition:
+<details>
+<summary>vt multi-partition</summary>summary>
 
 
 ```
@@ -396,6 +397,7 @@ Options:     input VCF file a   054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp
 
 Time elapsed: 0.42s
 ```
+</details>
 
  </details>
 
