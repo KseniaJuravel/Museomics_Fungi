@@ -156,6 +156,7 @@ bcftools stats                      054_T4.g.vcf.gz 053_T4.g.vcf.gz > joined_T4_
 
 plot-vcfstats                      joined_T4_2.3_vs_7B.stats.txt -p outdir_T4
 ```
+
  </details>
 
 
@@ -174,6 +175,7 @@ More comparisons can be found in the folder.
 
 
 ```
+
 vt/vt peek 053_T4.g.vcf.gz.RGsorteer.all.snp.filtered.vcf.gz.pass.vcf.gz
 peek v0.5
 
@@ -406,6 +408,7 @@ Options:     input VCF file a   054_T4.g.vcf.gz.RGsorted.HaplotypeCaller.all.snp
 
 Time elapsed: 0.42s
 ```
+
 </details>
 
  </details> 
@@ -421,6 +424,13 @@ chromosomes
 <details>
 <summary>Tool #1 for VCF analysis - bcftools</summary>
 
+
+
+ </details>
+
+
+<details>
+<summary>Tool #2 for VCF analysis - vt peek & multi-partition</summary>
 
 ```
 vt peek B05 vs 903053
@@ -453,7 +463,9 @@ stats: no. of samples                     :          1
 
        no. of VCF records                        :      76306
 
+```
 
+```
 vt peek B05 vs 903054
 
 stats: no. of samples                     :          1
@@ -485,13 +497,8 @@ stats: no. of samples                     :          1
        no. of VCF records                        :     101474
 
 ```
- </details>
 
-
-<details>
-<summary>Tool #2 for VCF analysis - vt peek & multi-partition</summary>
-
- ```
+```
 
 vt peek B05 vs B05 in house
 stats: no. of samples                     :          1
@@ -616,6 +623,7 @@ Options:     input VCF file a   B05normalized_bowtie_vs_GB05.sam.sorted.bam.out.
 Time elapsed: 0.24s
 
 ```
+
  </details>
 
 
