@@ -655,7 +655,7 @@ Time elapsed: 0.24s
 
 
 
-![miltu-peek](https://github.com/KseniaJuravel/Museomics_Fungi/blob/main/Figures%26Data/Variants%20detected%20for%20the%20different%20samples%20with%20T4%20and%20B05%20reference%20files.png)
+![miltu-peek](https://github.com/KseniaJuravel/Museomics_Fungi/blob/main/Figures%26Data/vt_results.png)
 
 The results shown by the tools indicate
 
