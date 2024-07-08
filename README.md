@@ -107,14 +107,12 @@ Using GATK jar /usr/local/hurcs/gatk4/4.2.5.0/share/gatk4-4.2.5.0-0/gatk-package
 <details>
 <summary>Results for VCF comparisons after correction with multiple tools</summary>
 
-
-
-<details>
-<summary>Plot of locations of variants</summary>
-
 <details>
 <summary>Results T4 (ALOC0100000) vs. strains 903053 and 903054 </summary>
 
+<details>
+<summary>Plot of locations of variants</summary>
+ 
 <details>
 <summary>Tool </summary>
 ```
@@ -535,6 +533,7 @@ Time elapsed: 0.24s
 
 ```
 
+ </details>
  </details>
  </details>
 
