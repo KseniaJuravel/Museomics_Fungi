@@ -95,7 +95,7 @@ Submitted batch job 23309328
 <224|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi%
 
 ```
-<details>
+</details>
 
 Variant calling following the suggested parameters and best practices from the GATK website.
 
