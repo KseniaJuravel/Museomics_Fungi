@@ -11,6 +11,8 @@ Each set of paired-end reads was mapped against the ??? reference genome ??? hap
 
 SNPs were called using Genome Analysis Toolkit version 4.2.0.0 and 4.2.5.0 according to the GATK Best Practices. SNPs and indels were filtered using the following parameters: VariantFiltration, QD < 2.0, LowQD, ReadPosRankSum < −8.0, LowRankSum, FS > 60.0, HightFS, MQRankSum < −12.5, MQRankSum, MQ < 40.0, LowMQ, HaplotypeScore > 13.0, HaploScore. Coverages were calculated using the Samtools mpileup toolkit. Several tools were used to ensure the accuracy of the genomic variants detected from the data.
 
+Refrence genomes published : https://journals.asm.org/doi/full/10.1128/ec.00164-12
+
 The parameters are shown in other fungi recent research:
 
 https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000979#cited
@@ -23,9 +25,9 @@ Ropars, J., Maufrais, C., Diogo, D. et al. Gene flow contributes to diversificat
 
 
 <details>
-<summary>Alignment of data</summary>
+<summary>Genomic variants identification for the sampled data in comparison to two strains reference genomes</summary>
 
-Sequencing data obtained for each of the strains:
+Sequencing data obtained for each of the strains for the museum specimens:
 
 ```
 515M Feb  3  2021 GBOS_S4_R1_001.fastq.gz.2.fq.gz
@@ -56,26 +58,133 @@ Reference genome obtained from NCBI for [_Botrytis cinerea B05.10_ GCF_000143535
 Bowtie2 (version 2.3.4.3 64-bit) was used for mapping the trimmed reads with the following parameters:
 
 ```
-sbatch -A gila.kahila Fungi_mapping.sh data/903054_trim2.fastq.gz ref/Bcin_B05.10 903054_vs_ref_Bcin_B05.10
+## Values as <sample_name> and <library> set randomly to fit the GATK requirements ##
 
-bowtie2 -p 70 -x $1 --very-fast --preserve-tags --no-unal -q -U $2 -S $3.sam;
-samtools view -@ 70 -h -S -b -o $3.bam $3.sam;
-samtools sort --threads 70 $3.bam -O BAM -o $3.sort.bam;
-samtools index -@ 70 $3.sort.bam;
+bowtie2 -p 32 -x $1 --very-fast --no-unal --rg-id <sample_name> --rg <SM:sample_name> --rg <LB:library> --rg <PU:sample_name_library> --rg <PL:ILLUMINA> -q -U $2 -S $3.sam;
+samtools view -@ 32 -h -S -b -o $3.bam $3.sam;
+samtools sort --threads 32 $3.bam -O BAM -o $3.sort.bam;
+samtools index -@ 32 $3.sort.bam;
 
 ```
 
+<details>
+<summary>sbatch command</summary>
+ 
+```
+<216|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh 903054_vs_ref_Bcin_T4.sort.bam /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCA_000292645.1_ASM29264v1_genomic_Botrytis_cinerea_T4_NCBI_20240708.fna
+Submitted batch job 23309323
+<217|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% rclone copy --cache-rps 50 --tpslimit 10 trim/903053_trim4_fastqc.html gdrive:Gila_Dagan_Fungi/                                                                         <218|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% nano Fungi_mapping.sh
+<219|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila Fungi_mapping.sh /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/Bcin_B0 /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/trim/903054_trim2.fastq.gz 903054_vs_ref_Bcin_B05.10
+Bcin_B05.10.1.bt2      Bcin_B05.10.3.bt2      Bcin_B05.10.rev.1.bt2
+Bcin_B05.10.2.bt2      Bcin_B05.10.4.bt2      Bcin_B05.10.rev.2.bt2
+<219|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila Fungi_mapping.sh /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/Bcin_B05.10 /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/trim/903054_trim2.fastq.gz 903054_vs_ref_Bcin_B05.10
+Submitted batch job 23309324
+<220|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila Fungi_mapping.sh /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/Bcin_B05.10 /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/trim/903053_trim3.fastq.gz 903053_vs_ref_Bcin_B05.10
+Submitted batch job 23309325
+<221|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila Fungi_mapping.sh /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/Bcin_T /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/trim/903053_trim3.fastq.gz 903053_vs_ref_Bcin_T4
+Bcin_T4.1.bt2      Bcin_T4.2.bt2      Bcin_T4.3.bt2      Bcin_T4.4.bt2      Bcin_T4.rev.1.bt2  Bcin_T4.rev.2.bt2
+<221|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila Fungi_mapping.sh /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/Bcin_T4 /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/trim/903053_trim3.fastq.gz 903053_vs_ref_Bcin_T4
+Submitted batch job 23309326
+<222|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila Fungi_mapping.sh /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/Bcin_T4 /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/trim/B05_trim3.fastq.gz B05.10_vs_ref_Bcin_T4
+Submitted batch job 23309327
+<223|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila Fungi_mapping.sh /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/Bcin_B0 /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/trim/B05_trim3.fastq.gz B05.10_vs_ref_Bcin_B05.10
+Bcin_B05.10.1.bt2      Bcin_B05.10.3.bt2      Bcin_B05.10.rev.1.bt2
+Bcin_B05.10.2.bt2      Bcin_B05.10.4.bt2      Bcin_B05.10.rev.2.bt2
+<223|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila Fungi_mapping.sh /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/Bcin_B05.10 /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/trim/B05_trim3.fastq.gz B05.10_vs_ref_Bcin_B05.10
+Submitted batch job 23309328
+<224|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi%
+
+```
+<details>
+
+Variant calling following the suggested parameters and best practices from the GATK website.
+
+```
+
+gatk --java-options "-Xmx60g" ValidateSamFile  -I $1  -R $2  -O $1.SUMMARY.txt -MODE SUMMARY
+
+gatk --java-options "-Xms60G -Xmx60G" CollectAlignmentSummaryMetrics -R $2 -I $1 -O $1.txt
+
+gatk --java-options "-Xms60G -Xmx60G" MarkDuplicates --REMOVE_SEQUENCING_DUPLICATES true --ASSUME_SORT_ORDER coordinate -R $2 -I $1 -O $1.rm_duplicates.bam -M $1.rm_duplicates.txt
+
+#https://gatk.broadinstitute.org/hc/en-us/articles/4418051458715-MarkDuplicates-Picard#--REMOVE_DUPLICATES
+#https://hpc.nih.gov/training/gatk_tutorial/markdup.html
+
+samtools index -@ 32 $1.rm_duplicates.bam
+
+gatk --java-options "-Xms20G -Xmx20G -XX:ParallelGCThreads=2" HaplotypeCaller -R $2 -I $1.rm_duplicates.bam -O $1.g.vcf.gz
+
+gatk --java-options "-Xmx60g" VariantFiltration -R $2 --variant $1.g.vcf.gz --filter-expression "QD < 2.0" --filter-name "SNP_QD" --filter-expression "FS > 60.0" --filter-name "SNP_FS" --filter-expression "SOR > 4.0" --filter-name "SNP_SOR" --filter-expression "MQ < 40.0" --filter-name "SNP_MQ" --filter-expression "MQRankSum < -12.5" --filter-name "SNP_MQRankSum" --filter-expression "ReadPosRankSum < -8.0" --filter-name "SNP_ReadPosRankSum" --output $1.filtered.vcf.gz
+
+gatk --java-options "-Xmx60g" SelectVariants -R $2 --variant $1.filtered.vcf.gz --exclude-filtered --exclude-non-variants --output $1.pass.vcf.gz
+#Using GATK jar /usr/local/hurcs/gatk4/4.2.5.0/share/gatk4-4.2.5.0-0/gatk-package-4.2.5.0-local.jar
+
+gatk --java-options "-Xmx60g" CountVariants -V $1.pass.vcf.gz
+
+#https://gatk.broadinstitute.org/hc/en-us/articles/4418051385883-CountVariants
+
+gatk --java-options "-Xmx60g"  VariantsToTable -V $1.pass.vcf.gz -F CHROM -F POS -F TYPE -GF AD -O $1.pass.vcf.gz.table.txt
+
+#https://gatk.broadinstitute.org/hc/en-us/articles/4418062680731-VariantsToTable
+
+```
+
+<details>
+<summary>sbatch command</summary>
+
+```
+<227|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% ls *.sort.bam
+903053_vs_ref_Bcin_B05.10.sort.bam  903054_vs_ref_Bcin_B05.10.sort.bam  B05.10_vs_ref_Bcin_B05.10.sort.bam
+903053_vs_ref_Bcin_T4.sort.bam      903054_vs_ref_Bcin_T4.sort.bam      B05.10_vs_ref_Bcin_T4.sort.bam
+<228|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh 903053_vs_ref_Bcin_T4.sort.ba /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCA_000292645.1_ASM29264v1_genomic_Botrytis_cinerea_T4_NCBI_20240708.fna
+903053_vs_ref_Bcin_T4.sort.bam      903053_vs_ref_Bcin_T4.sort.bam.bai
+<228|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh 903053_vs_ref_Bcin_T4.sort.bam /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCA_000292645.1_ASM29264v1_genomic_Botrytis_cinerea_T4_NCBI_20240708.fna
+Submitted batch job 23309332
+<229|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh B0_vs_ref_Bcin_T4.sort.bam /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCA_000292645.1_ASM29264v1_genomic_Botrytis_cinerea_T4_NCBI_20240708.fna
+B05.10_vs_ref_Bcin_B05.10.bam           B05.10_vs_ref_Bcin_B05.10.sort.bam.bai  B05.10_vs_ref_Bcin_T4.sort.bam
+B05.10_vs_ref_Bcin_B05.10.sam           B05.10_vs_ref_Bcin_T4.bam               B05.10_vs_ref_Bcin_T4.sort.bam.bai
+B05.10_vs_ref_Bcin_B05.10.sort.bam      B05.10_vs_ref_Bcin_T4.sam
+<229|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh B05.10_vs_ref_Bcin_T4.sort.ba /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCA_000292645.1_ASM29264v1_genomic_Botrytis_cinerea_T4_NCBI_20240708.fna
+B05.10_vs_ref_Bcin_T4.sort.bam      B05.10_vs_ref_Bcin_T4.sort.bam.bai
+<229|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh B05.10_vs_ref_Bcin_T4.sort.bam /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCA_000292645.1_ASM29264v1_genomic_Botrytis_cinerea_T4_NCBI_20240708.fna
+Submitted batch job 23309333
+<230|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh 903053_vs_ref_Bcin_B /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GC
+903053_vs_ref_Bcin_B05.10.bam           903053_vs_ref_Bcin_B05.10.sort.bam
+903053_vs_ref_Bcin_B05.10.sam           903053_vs_ref_Bcin_B05.10.sort.bam.bai
+<230|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh 903053_vs_ref_Bcin_B05.10.s /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GC
+903053_vs_ref_Bcin_B05.10.sam           903053_vs_ref_Bcin_B05.10.sort.bam      903053_vs_ref_Bcin_B05.10.sort.bam.bai
+<230|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh 903053_vs_ref_Bcin_B05.10.so /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GC
+903053_vs_ref_Bcin_B05.10.sort.bam      903053_vs_ref_Bcin_B05.10.sort.bam.bai
+<230|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh 903053_vs_ref_Bcin_B05.10.sort.bam /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCF
+GCF_000143535.2_ASM14353v4_genomic_Botrytis_cinerea_B05.10_NCBI_20240708.dict
+GCF_000143535.2_ASM14353v4_genomic_Botrytis_cinerea_B05.10_NCBI_20240708.fna
+GCF_000143535.2_ASM14353v4_genomic_Botrytis_cinerea_B05.10_NCBI_20240708.fna.fai
+<230|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh 903053_vs_ref_Bcin_B05.10.sort.bam /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCF_000143535.2_ASM14353v4_genomic_Botrytis_cinerea_B05.10_NCBI_20240708.f
+GCF_000143535.2_ASM14353v4_genomic_Botrytis_cinerea_B05.10_NCBI_20240708.fna
+GCF_000143535.2_ASM14353v4_genomic_Botrytis_cinerea_B05.10_NCBI_20240708.fna.fai
+<230|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh 903053_vs_ref_Bcin_B05.10.sort.bam /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCF_000143535.2_ASM14353v4_genomic_Botrytis_cinerea_B05.10_NCBI_20240708.fna
+Submitted batch job 23309334
+<231|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh 903054_vs_ref_Bcin_B05.10.sort.ba /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCF_000143535.2_ASM14353v4_genomic_Botrytis_cinerea_B05.10_NCBI_20240708.fna
+903054_vs_ref_Bcin_B05.10.sort.bam      903054_vs_ref_Bcin_B05.10.sort.bam.bai
+<231|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh 903054_vs_ref_Bcin_B05.10.sort.ba /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCF_000143535.2_ASM14353v4_genomic_Botrytis_cinerea_B05.10_NCBI_20240708.fna
+903054_vs_ref_Bcin_B05.10.sort.bam      903054_vs_ref_Bcin_B05.10.sort.bam.bai
+<231|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh 903054_vs_ref_Bcin_B05.10.sort.bam /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCF_000143535.2_ASM14353v4_genomic_Botrytis_cinerea_B05.10_NCBI_20240708.fna
+Submitted batch job 23309335
+<232|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh B0_vs_ref_Bcin_B05.10.sort.bam /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCF_000143535.2_ASM14353v4_genomic_Botrytis_cinerea_B05.10_NCBI_20240708.fna
+B05.10_vs_ref_Bcin_B05.10.bam               B05.10_vs_ref_Bcin_T4.sam
+B05.10_vs_ref_Bcin_B05.10.sam               B05.10_vs_ref_Bcin_T4.sort.bam
+B05.10_vs_ref_Bcin_B05.10.sort.bam          B05.10_vs_ref_Bcin_T4.sort.bam.bai
+B05.10_vs_ref_Bcin_B05.10.sort.bam.bai      B05.10_vs_ref_Bcin_T4.sort.bam.SUMMARY.txt
+B05.10_vs_ref_Bcin_T4.bam
+<232|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh B05.10_vs_ref_Bcin_B05.10.sort.ba /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCF_000143535.2_ASM14353v4_genomic_Botrytis_cinerea_B05.10_NCBI_20240708.fna
+B05.10_vs_ref_Bcin_B05.10.sort.bam      B05.10_vs_ref_Bcin_B05.10.sort.bam.bai
+<232|0>ksenia.juravel@moriah-gw-02:/sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi% sbatch -A gila.kahila GATK_correction.sh B05.10_vs_ref_Bcin_B05.10.sort.bam /sci/labs/gila.kahila/ksenia.juravel/aDNA_Fungi/ref/GCF_000143535.2_ASM14353v4_genomic_Botrytis_cinerea_B05.10_NCBI_20240708.fna
+Submitted batch job 23309336
+```
 
 </details>
 
 
-<details>
-<summary>Calling variants from alignment</summary>
-
-```
-
-
-```
 </details>
 
 
