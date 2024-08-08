@@ -187,6 +187,11 @@ Submitted batch job 23309336
 
 </details>
 
+## Variants comparison for the different strains against the reference genomes
+
+![Variants comparison for the different strains against the reference genomes](https://github.com/KseniaJuravel/Museomics_Fungi/blob/main/Figures%26Data/g6281.png)
+
+
 
 
 <details>
