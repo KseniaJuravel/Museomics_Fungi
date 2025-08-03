@@ -1,5 +1,5 @@
 # Museomics_Fungi
-Work performed for historical samples of _ Botrytis fungi_ retrieved from [The National Natural History Collections at the Hebrew University of Jerusalem](https://en-nnhc.huji.ac.il/).
+Work performed for historical samples of _Botrytis fungi_ revived from [The National Natural History Collections at the Hebrew University of Jerusalem](https://en-nnhc.huji.ac.il/) herbarium and [published Sade, D., Breuer, G., Juravel, K., Jasinska, W., Arzi, A., Sade, N., Brotman, Y., Meller Harel, Y., Covo, S., Levy, M., & Kahila Bar-Gal, G. (2025). From herbarium to life: Implications of reviving historical fungi for modern plant pathology and agriculture. iScience, 28, 112904. https://doi.org/10.1016/j.isci.2025.112904] https://www.cell.com/iscience/fulltext/S2589-0042(25)01165-4.
 
 ## Production of whole-genome sequencing data
 
@@ -11,9 +11,9 @@ Each set of paired-end reads was mapped against the ??? reference genome ??? hap
 
 SNPs were called using Genome Analysis Toolkit version 4.2.0.0 and 4.2.5.0 according to the GATK Best Practices. SNPs and indels were filtered using the following parameters: VariantFiltration, QD < 2.0, LowQD, ReadPosRankSum < −8.0, LowRankSum, FS > 60.0, HightFS, MQRankSum < −12.5, MQRankSum, MQ < 40.0, LowMQ, HaplotypeScore > 13.0, HaploScore. Coverages were calculated using the Samtools mpileup toolkit. Several tools were used to ensure the accuracy of the genomic variants detected from the data.
 
-Refrence genomes published : https://journals.asm.org/doi/full/10.1128/ec.00164-12
+Reference genomes published: https://journals.asm.org/doi/full/10.1128/ec.00164-12
 
-The parameters are shown in other fungi recent research:
+The parameters are shown in other fungi's recent research:
 
 https://www.microbiologyresearch.org/content/journal/mgen/10.1099/mgen.0.000979#cited
 
@@ -21,11 +21,11 @@ Li X, Muñoz JF, Gade L, Argimon S, Bougnoux M-E, Bowers JR, Chow NA, Cuesta I, 
 
 https://www.nature.com/articles/s41467-018-04787-4#citeas
 
-Ropars, J., Maufrais, C., Diogo, D. et al. Gene flow contributes to diversification of the major fungal pathogen Candida albicans. Nat Commun 9, 2253 (2018). https://doi.org/10.1038/s41467-018-04787-4
+Ropars, J., Maufrais, C., Diogo, D. et al. Gene flow contributes to the diversification of the major fungal pathogen Candida albicans. Nat Commun 9, 2253 (2018). https://doi.org/10.1038/s41467-018-04787-4
 
 
 <details>
-<summary>Genomic variants identification for the sampled data in comparison to two strains reference genomes</summary>
+<summary>Genomic variants identification for the sampled data in comparison to the two strains' reference genomes</summary>
 
 Sequencing data obtained for each of the strains for the museum specimens:
 
