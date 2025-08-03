@@ -1,5 +1,5 @@
 # Museomics_Fungi
-Work performed for historical samples of _Botrytis fungi_ revived from [The National Natural History Collections at the Hebrew University of Jerusalem](https://en-nnhc.huji.ac.il/) herbarium and [published Sade, D., Breuer, G., Juravel, K., Jasinska, W., Arzi, A., Sade, N., Brotman, Y., Meller Harel, Y., Covo, S., Levy, M., & Kahila Bar-Gal, G. (2025). From herbarium to life: Implications of reviving historical fungi for modern plant pathology and agriculture. iScience, 28, 112904. https://doi.org/10.1016/j.isci.2025.112904] https://www.cell.com/iscience/fulltext/S2589-0042(25)01165-4.
+Work performed for historical samples of _Botrytis fungi_ revived from [The National Natural History Collections at the Hebrew University of Jerusalem](https://en-nnhc.huji.ac.il/) herbarium and [published Sade, D., Breuer, G., Juravel, K., Jasinska, W., Arzi, A., Sade, N., Brotman, Y., Meller Harel, Y., Covo, S., Levy, M., & Kahila Bar-Gal, G. (2025). From herbarium to life: Implications of reviving historical fungi for modern plant pathology and agriculture. iScience, 28, 112904. https://doi.org/10.1016/j.isci.2025.112904](https://www.cell.com/iscience/fulltext/S2589-0042(25)01165-4).
 
 ## Production of whole-genome sequencing data
 
