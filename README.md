@@ -1,5 +1,5 @@
 # Museomics_Fungi
-Work performed for ancient Botrytis fungi analysis of two strains
+Work performed for historical samples of _ Botrytis fungi_ retrieved from [The National Natural History Collections at the Hebrew University of Jerusalem](https://en-nnhc.huji.ac.il/).
 
 ## Production of whole-genome sequencing data
 
