@@ -3,15 +3,16 @@ Work performed for historical samples of _Botrytis fungi_ revived from [The Nati
 
 ## Production of whole-genome sequencing data
 
-Genomic DNA was extracted from the colonies using the ????? protocol previously described in ref. ???? or the ???? Kit . The genomes were sequenced either at the ????? Platform of Institut ????, the Department ???? using the Illumina ??? sequencing technology. Paired-end reads of ???? bp were obtained. Reads have been deposited at the NCBI Sequence Read Archive under BioProject ID PRJN######.
+Genomic DNA was extracted from the colonies using the guanidinium thiocyanate (GuSCN) purification method previously described in ref. 33 or the MasterPure Yeast DNA Purification Kit (Lucigen, #MPY80200). The genomes were sequenced at the Crown Genomics Institute of the Nancy and Stephen Grand Israel National Center for Personalized Medicine, Weizmann Institute of Science, using the Illumina HiSeq-2000 sequencing technology. Paired-end reads of 100 bp were obtained. Reads have been deposited at the NCBI Sequence Read Archive under BioProject ID PRJNA1199004.
+
 
 ## The analysis of the whole-genome sequencing data
 
-Each set of paired-end reads was mapped against the ??? reference genome ??? haplotype ???  downloaded from the ???? database (version ?? ??Date) using the Bowtie2 Alignment tool, version 2.4.1 (Built on Fri Feb 28 17:23:43 UTC 2020). SAMtools samtools 1.9, Using htslib 1.9 and Picard tools version 1.70 (http://broadinstitute.github.io/picard) to filter, sort and convert SAM files. 
+Each set of paired-end reads was mapped against the Botrytis cinerea reference genomes B05.10 (accession: AAID02000000) and T4 (accession: ALOC01000000) downloaded from the NCBI GenBank database (version published in Staats & van Kan, 2012, [accessed July 2024]) using the Bowtie2 Alignment tool, version 2.4.1 (Built on Fri Feb 28 17:23:43 UTC 2020). SAM files were processed with SAMtools 1.9 (using htslib 1.9) and Picard tools version 1.70 (http://broadinstitute.github.io/picard) for filtering, sorting, and conversion.
 
-SNPs were called using Genome Analysis Toolkit version 4.2.0.0 and 4.2.5.0 according to the GATK Best Practices. SNPs and indels were filtered using the following parameters: VariantFiltration, QD < 2.0, LowQD, ReadPosRankSum < −8.0, LowRankSum, FS > 60.0, HightFS, MQRankSum < −12.5, MQRankSum, MQ < 40.0, LowMQ, HaplotypeScore > 13.0, HaploScore. Coverages were calculated using the Samtools mpileup toolkit. Several tools were used to ensure the accuracy of the genomic variants detected from the data.
+SNPs were called using Genome Analysis Toolkit (GATK) versions 4.2.0.0 and 4.2.5.0 according to the GATK Best Practices. SNPs and indels were filtered using the following parameters: VariantFiltration, QD < 2.0 (LowQD), ReadPosRankSum < −8.0 (LowRankSum), FS > 60.0 (HighFS), MQRankSum < −12.5 (MQRankSum), MQ < 40.0 (LowMQ), HaplotypeScore > 13.0 (HaploScore). Coverage statistics were calculated using the Samtools mpileup toolkit. Multiple tools were applied to validate the accuracy and reliability of genomic variant detection.
 
-Reference genomes published: https://journals.asm.org/doi/full/10.1128/ec.00164-12
+Reference genomes: Staats, M., & van Kan, J.A.L. (2012). Genome update of Botrytis cinerea strains B05.10 and T4. Eukaryotic Cell, 11(11), 1413–1414. https://doi.org/10.1128/ec.00164-12
 
 The parameters are shown in other fungi's recent research:
 
